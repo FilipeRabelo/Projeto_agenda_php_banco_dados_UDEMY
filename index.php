@@ -2,7 +2,6 @@
 
   include_once("config/url.php");
 
-
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +14,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda de contatos</title>
 
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    
+    <!-- CSS com a BASE_URL -->
+  
+    <link rel="stylesheet" href="<?= $BASE_URL ?>css/styles.css" type="text/css">
 
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" 
@@ -31,13 +34,22 @@
           referrerpolicy="no-referrer" 
     />
 
-    
+    <!-- <style>
+      body{
+        background-color: aqua;
+      }
+    </style> -->
+
+
 
   </head>
 
   <body>
 
-    <?php echo "Ola mundo! " ?>
+    <h1>Testando agenda</h1>
+    <i class="fas fa-eye"></i>
+
+
     
   </body>
 
