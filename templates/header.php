@@ -1,7 +1,14 @@
 <?php
-
-include_once("config/url.php");
 // include_once("config/connection.php"); PARA VERIFICAR SE TEM ERRO NA CONEXAO... 
+
+  include_once("config/url.php");
+  include_once("config/process.php");  
+
+  // Limap a msg
+  if(isset($_SESSION["msg"])){
+    $printMsg = $_SESSION["msg"];
+    $_SESSION["msg"] = "";  // Limpando a msg da sessao qndo recarregar a pagina // 
+  }
 
 ?>
 
