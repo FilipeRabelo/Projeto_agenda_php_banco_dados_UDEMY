@@ -5,12 +5,39 @@
   include_once("connection.php");     // conctando
   include_once("url.php");            // chamando a base url
 
-  $contacts = [];
+  $id;
 
-  $query = "SELECT * FROM contacts";  // select
+  if(!empty($_GET)){
+    $id = $_GET["id"];
+  }
+  
+  // Retorna o dado de um contato
 
-  $stmt = $conn->prepare($query);
+  if(!empty($id)){
 
-  $stmt->execute();
+    $query = "SELECT * FROM   CONTACTS where id = :id";
 
-  $contacts = $stmt->fetchAll();      // para receber todos os dados por meio da PDO
+    $stmt = $conn->prepare($query);
+
+    $stmt->bindParam(":id", $id);
+
+    $stmt->execute();
+
+    $contact = $stmt->fetch();
+
+  }else{
+
+    // Retorna todos os contatos
+    $contacts = [];
+  
+    $query = "SELECT * FROM contacts";  // select
+  
+    $stmt = $conn->prepare($query);
+  
+    $stmt->execute();
+  
+    $contacts = $stmt->fetchAll();      // para receber todos os dados por meio da PDO
+
+  }
+
+
