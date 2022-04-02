@@ -5,39 +5,47 @@
   include_once("connection.php");     // conctando
   include_once("url.php");            // chamando a base url
 
-  $id;
+  $data = $_POST;
+  if(!empty($data)){   // SE A DATA NAO ESTIVER VAZIA
 
-  if(!empty($_GET)){
-    $id = $_GET["id"];
-  }
+  } else {
+
+    $id;
   
-  // Retorna o dado de um contato
-
-  if(!empty($id)){
-
-    $query = "SELECT * FROM   CONTACTS where id = :id";
-
-    $stmt = $conn->prepare($query);
-
-    $stmt->bindParam(":id", $id);
-
-    $stmt->execute();
-
-    $contact = $stmt->fetch();
-
-  }else{
-
-    // Retorna todos os contatos
-    $contacts = [];
+    if(!empty($_GET)){
+      $id = $_GET["id"];
+    }
+    
+    // Retorna o dado de um contato
   
-    $query = "SELECT * FROM contacts";  // select
+    if(!empty($id)){
   
-    $stmt = $conn->prepare($query);
+      $query = "SELECT * FROM   CONTACTS where id = :id";
   
-    $stmt->execute();
+      $stmt = $conn->prepare($query);
   
-    $contacts = $stmt->fetchAll();      // para receber todos os dados por meio da PDO
+      $stmt->bindParam(":id", $id);
+  
+      $stmt->execute();
+  
+      $contact = $stmt->fetch();
+  
+    }else{
+  
+      // Retorna todos os contatos
+      $contacts = [];
+    
+      $query = "SELECT * FROM contacts";  // select
+    
+      $stmt = $conn->prepare($query);
+    
+      $stmt->execute();
+    
+      $contacts = $stmt->fetchAll();      // para receber todos os dados por meio da PDO
+  
+    }
 
-  }
+  }  // FIM DO ELSE //
+
 
 
