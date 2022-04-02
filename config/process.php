@@ -86,6 +86,3 @@
   // FECHAR CONEXÂO
 
   $conn = null;
-
-
-
