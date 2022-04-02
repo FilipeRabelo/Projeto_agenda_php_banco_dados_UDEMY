@@ -6,8 +6,14 @@
   include_once("url.php");            // chamando a base url
 
   $data = $_POST;
+
+  //MODIFICAÇÕES NO BANCO
   if(!empty($data)){   // SE A DATA NAO ESTIVER VAZIA
 
+    print_r($data); exit;
+    
+
+  // SELEÇÃO DE DADOS
   } else {
 
     $id;
