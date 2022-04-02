@@ -1,7 +1,82 @@
+/* body {
+  background-color: #007bff;
+} */
+
 .navbar-brand img{
   width: 50px;
 }
 
-body{
-  background-color: aqua;
+#main-title{
+  text-align: center;
+  margin: 15px 0 30px;
 }
+
+/* HOME */
+#contacts-table{
+  max-width: 800px;
+  margin: 0 auto;  /* tecnica de centralização */
+}
+
+#contacts-table thead {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.col-id {
+  font-weight: bold;
+}
+
+.actions {
+  text-align: right;
+  width: 150px;
+}
+
+.actions i {
+  font-size: 17px;
+  margin-right: 5px;
+}
+
+.check-icon {
+  color: #1e7e34;
+}
+
+.edit-icon {
+  color: #007bff;
+}
+
+.delete-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.delete-icon {
+  color: #bd2130;
+}
+
+#empty-list-text {
+  text-align: center;
+}
+
+#msg {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  padding: 10px;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;  /*para centralizar tudo */
+  margin-top: 30px;
+}
+
+/* link Agenda/Adicionar contatos */
+#home-link {
+  transition: 0.6s;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#home-link:hover {
+  color: black;
+}
+/* ////////////////////////////// */
