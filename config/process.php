@@ -27,6 +27,17 @@
       $stmt->bindParam(":phone", $phone);
       $stmt->bindParam(":observation", $observation);
 
+      try {            
+
+        $stmt->execute();
+        $_SESSION["msg"] = "Contato criado com sucesso!";
+
+      } catch(PDOException $e) {
+        //erro na conexão
+        $error = $e->getMessage();   //Definindo a variavel erro
+        echo "Erro: $error";
+      }
+
       
     }
 
@@ -71,6 +82,10 @@
     }
 
   }  // FIM DO ELSE //
+
+  // FECHAR CONEXÂO
+
+  $conn = null;
 
 
 
