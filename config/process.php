@@ -8,10 +8,29 @@
   $data = $_POST;
 
   //MODIFICAÇÕES NO BANCO
-  if(!empty($data)){   // SE A DATA NAO ESTIVER VAZIA
+  if(!empty($data)){   // SE A DATA NAO ESTIVER VAZIA //  se data for diferente de vazio //
 
-    print_r($data); exit;
+    print_r($data);  
     
+    // CRIAR CONTATO
+    if($data["type"] === "create"){
+
+      $name        = $data["name"];
+      $phone       = $data["phone"];
+      $observation = $data["observation"];
+
+      $query = "INSERT INTO contacts (name, phone, observation) VALUES (:name, :phone, :observation)";
+
+      $stmt = $conn->prepare($query);
+
+      $stmt->bindParam(":name", $name);
+      $stmt->bindParam(":phone", $phone);
+      $stmt->bindParam(":observation", $observation);
+
+      
+    }
+
+
 
   // SELEÇÃO DE DADOS
   } else {
