@@ -9,7 +9,7 @@ include_once("templates/header.php");
 
       <!-- action é o arquivo onde vou processar as informações / method POST -->
 
-      <form action="<?= $BASE_URL ?>config/process.php>" method="POST" > 
+      <form id="create-form" action="<?= $BASE_URL ?>config/process.php>" method="POST" > 
         <input type="hidden" name="type" value="create" >   <!-- Para guiar nosso projeto (no process) para o que eu quero fazer como envio desse formulario -->
         
         <div class="form-group">   <!-- DIV PARA NOME NO CADASTRO -->
