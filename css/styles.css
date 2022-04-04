@@ -1,25 +1,31 @@
-/* body {
-  background-color: #007bff;
-} */
-
-.navbar-brand img{
+.navbar-brand img {
   width: 50px;
 }
 
-#main-title{
+#main-title {
   text-align: center;
   margin: 15px 0 30px;
 }
 
+#home-link {
+  transition: 0.6s;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#home-link:hover {
+  color: black;
+}
+
 /* HOME */
-#contacts-table{
+#contacts-table {
   max-width: 800px;
-  margin: 0 auto;  /* tecnica de centralização */
+  margin: 0 auto;
 }
 
 #contacts-table thead {
-  color: #fff;
-  background-color: #007bff;
+  color: #FFF;
+  background-color: #007BFF;
 }
 
 .col-id {
@@ -32,16 +38,20 @@
 }
 
 .actions i {
-  font-size: 17px;
+  font-size: 18px;
   margin-right: 5px;
 }
 
 .check-icon {
-  color: #1e7e34;
+  color: #1E7E34;
 }
 
 .edit-icon {
-  color: #007bff;
+  color: #007BFF;
+}
+
+.delete-form {
+  display: inline-block;
 }
 
 .delete-btn {
@@ -51,7 +61,7 @@
 }
 
 .delete-icon {
-  color: #bd2130;
+  color: #BD2130;
 }
 
 #empty-list-text {
@@ -60,64 +70,57 @@
 
 #msg {
   color: #155724;
-  background-color: #d4edda;
-  border: 1px solid #c3e6cb;
+  background-color: #D4EDDA;
+  border: 1px solid #C3E6CB;
   padding: 10px;
   text-align: center;
   max-width: 500px;
-  margin: 0 auto;  /*para centralizar tudo */
+  margin: 0 auto;
   margin-top: 30px;
 }
 
-/* link Agenda/Adicionar contatos */
-#home-link {
-  transition: 0.6s;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-#home-link:hover {
-  color: black;
-}
-/* ////////////////////////////// */
-
 /* SHOW / CONTATO INDIVIDUAL */
-
-#view-contact-container{
+#view-contact-container {
   max-width: 500px;
   margin: 0 auto;
 }
 
-.bold{
+.bold {
   font-weight: bold;
 }
 
-#back-link-container{
+#back-link-container {
   display: block;
   width: 500px;
   margin: 30px auto 0;
 }
 
-#back-link{
-  border: 1px solid #007bff;
-  color: #007bff;
+#back-link {
+  border: 1px solid #007BFF;
+  color: #007BFF;
   border-radius: 4px;
   padding: 5px;
-  transition: 0.2s;
-  font-weight: bold;
+  transition: 0.5s;
 }
 
-#back-link:hover{
-  background-color: #007bff;
-  color: #fff;
+#back-link:hover {
   text-decoration: none;
+  color: #FFF;
+  background-color: #007BFF;
 }
 
 /* CREATE */
-
 #create-form,
-#edit-form{
+#edit-form {
   max-width: 500px;
-  margin:  0 auto;
+  margin: 0 auto;
 }
 
+/* MOBILE */
+@media(max-width: 480px) {
+
+  #home-link {
+    display: none;
+  }
+
+}
